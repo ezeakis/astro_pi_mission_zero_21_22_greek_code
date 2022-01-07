@@ -1,0 +1,43 @@
+from sense_hat import SenseHat
+import time
+sense = SenseHat()
+sense.set_rotation(270)
+scs = 0.095
+o = (0,0,0)
+w = (255,255,255)
+
+stay_united = [
+
+w,w,o,o,o,o,w,w,
+w,o,w,o,o,w,o,w,
+o,w,w,o,o,w,w,o,
+o,w,w,o,o,w,w,o,
+o,w,w,o,o,w,w,o,
+o,w,o,o,o,o,w,o,
+w,o,w,o,o,w,o,w,
+w,w,o,o,o,o,w,w,
+]
+
+sense.show_message("hi astronauts",scroll_speed = scs,text_colour=[0,0,0],back_colour=[255,255,255])
+
+hum = sense.get_humidity()
+hum = round(hum)
+
+if hum < 33:
+  bc = [46,204,113]
+
+elif hum < 66:
+  bc=[41, 128, 185 ]
+  
+else:
+  bc=[231, 76, 60 ]
+
+sense.show_message("humidity is",scroll_speed = scs,text_colour=[0,0,0],back_colour=bc)
+sense.show_message(str(hum),scroll_speed = scs,back_colour=bc)
+
+sense.set_pixels(stay_united)
+time.sleep(.75)
+
+sense.show_message("stay united",scroll_speed= scs ,text_colour=[0, 0, 0],back_colour=[255,255,255])
+
+sense.set_pixels(stay_united)
