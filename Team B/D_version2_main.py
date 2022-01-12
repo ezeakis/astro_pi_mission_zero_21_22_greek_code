@@ -14,6 +14,6 @@ Green_Matrix = [ G, G, G, G, G, G, G, B, R, R, R, G, R, R, R, B, R, G, G, R, G, 
 
 #sense.set_pixels(Green_Matrix)
 
-Blue_Matrix = [ B, B, B, B, B, B, B, G, R, R, R, G, R, R, R, G, R, R, R, R, R, R, R, G, R, R, R, R, R, R, R, G, B, R, R, R, R, R, B, G, B, B, R, R, R, B, B, G, B, B, B, R, B, B, B, G G, G, G, G, G, G, G, B, ] 
+Blue_Matrix = [ B, B, B, B, B, B, B, G, R, R, R, G, R, R, R, G, R, R, R, R, R, R, R, G, R, R, R, R, R, R, R, G, B, R, R, R, R, R, B, G, B, B, R, R, R, B, B, G, B, B, B, R, B, B, B, G, G, G, G, G, G, G, G, B, ] 
 
 sense.set_pixels(Blue_Matrix)
